@@ -16,19 +16,19 @@ clear
 echo -e ""
 echo -e "======================================"
 echo -e ""
-echo -e "[1]. Change Port OpenVPN"
-echo -e "[2]. Change Port Wireguard"
-echo -e "[3]. Change Port Vmess + Vless"
-echo -e "[4]. Change Port Trojan"
-echo -e "[5]. Change Port Squid"
-echo -e "[6]. Change Port SSTP"
-echo -e "[7]. Change Port SSH WS NON TLS"
-echo -e "[8]. Change Port SSH WS TLS / SSL"
+echo -e "[1]. เปลี่ยนพอต OpenVPN"
+echo -e "[2]. เปลี่ยนพอต Wireguard"
+echo -e "[3]. เปลี่ยนพอต Vmess + Vless"
+echo -e "[4]. เปลี่ยนพอต Trojan"
+echo -e "[5]. เปลี่ยนพอต Squid"
+echo -e "[6]. เปลี่ยนพอต SSTP"
+echo -e "[7]. เปลี่ยนพอต SSH WS NON TLS"
+echo -e "[8]. เปลี่ยนพอต SSH WS TLS / SSL"
 echo -e "[9]. Exit"
 echo -e ""
 echo -e "======================================"
 echo -e ""
-read -p "Select From Options [ 1-7 ] : " port
+read -p "เลือกจากตัวเลือก [ 1-7 ] : " port
 echo -e ""
 case $port in
 1)
@@ -60,6 +60,6 @@ clear
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "กรุณากรอกตัวเลขให้ถูกต้อง"
 ;;
 esac
