@@ -87,6 +87,6 @@ echo "----------------------------------------------";
         cat /tmp/vpn-login-udp.txt
 fi
 echo "----------------------------------------------";
-echo "Script By Akbar Maulana"
+echo "Script By Orgaen"
 echo "";
 
