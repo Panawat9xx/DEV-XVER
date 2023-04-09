@@ -17,7 +17,7 @@ domain=$(cat /etc/xray/domain)
 clear
 read -p "Username : " Login
 read -p "Password : " Pass
-read -p "Expired (Days): " masaaktif
+read -p "จำนวนวันใช้งาน (Days): " masaaktif
 
 IP=$(wget -qO- ipinfo.io/ip);
 ws="$(cat ~/log-install.txt | grep -w "Websocket TLS" | cut -d: -f2|sed 's/ //g')"
@@ -39,12 +39,12 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 expi=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e ""
-echo -e "Informasi SSH & OpenVPN"
+echo -e "ข้อมูล SSH & OpenVPN"
 echo -e "=============================="
 echo -e "IP/Host       : $IP"
 echo -e "Domain        : ${domain}"
-echo -e "Username      : $Login"
-echo -e "Password      : $Pass"
+echo -e "ชื่อผู้ใช้         : $Login"
+echo -e "รหัสผ่าน        : $Pass"
 echo -e "Dropbear      : 109, 143"
 echo -e "SSL/TLS       : $ssl"
 echo -e "Port Squid    : $sqd"
@@ -61,8 +61,8 @@ echo -e "OVPN TCP      : http://$IP:89/tcp.ovpn"
 echo -e "OVPN UDP      : http://$IP:89/udp.ovpn"
 echo -e "OVPN SSL      : http://$IP:89/ssl.ovpn"
 echo -e "BadVpn        : 7100-7200-7300"
-echo -e "Created       : $hariini"
-echo -e "Expired       : $expi"
+echo -e "วันสร้าง          : $hariini"
+echo -e "วันหมดอายุ      : $expi"
 echo -e "=============================="
 echo -e "Payload Websocket TLS"
 echo -e "=============================="
